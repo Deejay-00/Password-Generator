@@ -13,15 +13,16 @@
     <section class="container">
         <div class="wrapper">
             <h3 class="heading">Generate a
-                <br />
                 <span style="color: #10B981;"> random password</span>
             </h3>
             <p>Never use an insecure password again.</p>
-            <button class="generate-btn" id="generate-btn" onclick="generatePassword()">Generate Password</button>
+            <div class="buttons">
+                <button class="btn" id="generate-btn" onclick="generatePassword()">Generate Password</button>
+                <button class="btn" id="copy-btn" onclick="copyPassword">Copy</button>
+            </div>
             <hr>
-            <div>
-                <button id="displayy" class="display toggle btn">nfJjy!dDvR&ial</button>
-                <button id="display" class="display copy btn">egxWij@veiPUwK</button>
+            <div class="output">
+                <input type="text" id="output" placeholder="Generate Password" readonly/>
             </div>
         </div>
 

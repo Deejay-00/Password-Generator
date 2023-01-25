@@ -10,10 +10,7 @@
 
 function generatePassword() {
     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()-+={[}],|:;<>.?/";
-    // let generateBtn = document.getElementById("generate-btn");
-    // let copyBtn = document.getElementById("copy-btn");
     let passwordLength = 10;
-
     let password = "";
 
     for (let i = 0; i <= passwordLength; i++) {
@@ -21,6 +18,7 @@ function generatePassword() {
         let randomIndex = Math.floor(Math.random() * characters.length);
         password += characters.substring(randomIndex, randomIndex +1);
     }
+    
     document.getElementById("output").value = password;
 }
 
@@ -30,4 +28,6 @@ function copyPassword() {
     output.select();
     output.setSelectionRange(0,999);
     document.execCommand("copy");
+
+    alert("Text copied: " + output.value);
 }
